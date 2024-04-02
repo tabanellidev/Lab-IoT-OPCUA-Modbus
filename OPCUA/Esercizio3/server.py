@@ -12,6 +12,7 @@ def stop():
     global check
     check = False
 
+# Metodo per controllare la macchina
 @uamethod
 def controls(parent, x):    
     
@@ -69,7 +70,8 @@ if __name__ == "__main__":
     outarg.Description= ua.LocalizedText("Messaggio")
 
     # Istanzio l’oggetto metodo controls
-    multiply_node = objects.add_method(idx, "controls", controls, [inarg], [outarg]) # Creo il metodo controls passando gli argomenti inarg e outarg
+    multiply_node = objects.add_method(idx, "controls", controls, [inarg], [outarg]) # Creo il metodo controls passando gli argomenti in input (inarg) e in output (outarg)
+                                                                                     # idx è il namespace 
 
     server.start()
 

@@ -1,5 +1,7 @@
 from opcua import Client
 
+# Consente di mandare comandi alla macchina tramite il client attraverso il server
+
 if __name__ == "__main__":
     #Client setup
     client = Client("opc.tcp://localhost:4840")
@@ -34,7 +36,7 @@ if __name__ == "__main__":
         uri= "OPCUA_SERVER"
         idx= client.get_namespace_index(uri)
 
-        res= objects.call_method("{}:controls".format(idx), "Start") # Chiamo il metodo 'controls' di Linea1 e passo il parametro 'Start'
+        res= objects.call_method("{}:controls".format(idx), "Stop") # Chiamo il metodo 'controls' di Linea1 e passo il parametro 'Stop' per fermare la macchina
         print("Method result is: ", res) 
 
 
