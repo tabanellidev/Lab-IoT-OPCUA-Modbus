@@ -34,7 +34,7 @@ if __name__ == "__main__":
         print("Linea2: ", macchinaL2)
         print("varL2:  ", varmL2)
 
-        #Print del valore della variabile
+        # Print del valore della variabile
         print("Valore L1: ", varmL1.get_value())
 
         #[2.5] - Print del valore della variabile

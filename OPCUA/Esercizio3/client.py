@@ -34,8 +34,8 @@ if __name__ == "__main__":
         uri= "OPCUA_SERVER"
         idx= client.get_namespace_index(uri)
 
-        res= objects.call_method("{}:controls".format(idx), "Start")
-        print("Method result is: ", res)
+        res= objects.call_method("{}:controls".format(idx), "Start") # Chiamo il metodo 'controls' di Linea1 e passo il parametro 'Start'
+        print("Method result is: ", res) 
 
 
 

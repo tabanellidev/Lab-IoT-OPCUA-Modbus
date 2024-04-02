@@ -7,6 +7,7 @@ def move():
     global check
     check = True
 
+# Metodo per fermare la macchina, settando il flag check a False
 def stop():
     global check
     check = False
@@ -17,8 +18,8 @@ def controls(parent, x):
     msg = "Comando invalido"
 
     if x == "Stop":
-        stop()
-        msg = "Fermato"
+        stop()              # chiamo la funzione stop
+        msg = "Fermato"     # setto il messaggio di ritorno
 
     if x == "Start":
         move()
@@ -54,11 +55,11 @@ if __name__ == "__main__":
     
     # Definizione degli argomenti di Input/Output
     inarg= ua.Argument()
-    inarg.Name= "Input"
-    inarg.DataType= ua.NodeId(ua.ObjectIds.String)
+    inarg.Name= "Input"                                 # Nome dell'argomento
+    inarg.DataType= ua.NodeId(ua.ObjectIds.String)      # Tipo di dato dell'argomento
     inarg.ValueRank= -1
     inarg.ArrayDimensions= []
-    inarg.Description= ua.LocalizedText("Comando")
+    inarg.Description= ua.LocalizedText("Comando")      # Descrizione dell'argomento
 
     outarg= ua.Argument()
     outarg.Name= "Output"
@@ -68,7 +69,7 @@ if __name__ == "__main__":
     outarg.Description= ua.LocalizedText("Messaggio")
 
     # Istanzio l’oggetto metodo controls
-    multiply_node = objects.add_method(idx, "controls", controls, [inarg], [outarg])
+    multiply_node = objects.add_method(idx, "controls", controls, [inarg], [outarg]) # Creo il metodo controls passando gli argomenti inarg e outarg
 
     server.start()
 

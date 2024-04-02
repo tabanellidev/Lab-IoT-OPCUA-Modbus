@@ -5,6 +5,7 @@ from opcua import ua, Server
 if __name__ == "__main__":
 
     #Server setup
+    # Specificando l'indirizzo del server e la porta in ascolto
     server = Server()
     server.set_endpoint("opc.tcp://localhost:4840")
 
@@ -16,8 +17,9 @@ if __name__ == "__main__":
     objects = server.get_objects_node()
 
     #Aggiunta di oggetti e variabili all'Objects node
-    macchinaL1 = objects.add_object(idx, "Linea1")
-    varmL1 = macchinaL1.add_variable(idx, "varL1", 0)
+    macchinaL1 = objects.add_object(idx, "Linea1")      # Inizializzazione dell'oggetto Linea1 specificando id e nome
+    varmL1 = macchinaL1.add_variable(idx, "varL1", 0)   # Inizializzazione della variabile varL1 specificando id, nome e valore iniziale (0)
+    
     #Impostare la variabile come modificabile dal client
     varmL1.set_writable()    
 
@@ -32,6 +34,7 @@ if __name__ == "__main__":
     server.start()
 
     try:
+        # Ciclo for per incrementare il valore della variabile + 1 ad ogni ciclo e stamparlo
         while True:
             time.sleep(1)
             #Recupero del valore della variabile
