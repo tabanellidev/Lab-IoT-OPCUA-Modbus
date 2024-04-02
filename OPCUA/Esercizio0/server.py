@@ -17,8 +17,8 @@ if __name__ == "__main__":
     objects = server.get_objects_node()
 
     #Aggiunta di oggetti e variabili all'Objects node
-    macchinaL1 = objects.add_object(idx, "Linea1")      # Inizializzazione dell'oggetto Linea1 specificando id e nome
-    varmL1 = macchinaL1.add_variable(idx, "varL1", 0)   # Inizializzazione della variabile varL1 specificando id, nome e valore iniziale (0)
+    macchinaL1 = objects.add_object(idx, "Linea1")      # Inizializzazione dell'oggetto Linea1 specificando namespace e nome
+    varmL1 = macchinaL1.add_variable(idx, "varL1", 0)   # Inizializzazione della variabile varL1 specificando namespace, nome e valore iniziale (0)
     
     #Impostare la variabile come modificabile dal client
     varmL1.set_writable()    
