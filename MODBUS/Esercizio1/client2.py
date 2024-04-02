@@ -11,11 +11,11 @@ client = ModbusClient(host='127.0.0.1', port=502)
 
 #[1.1] - Selezionare l'offset del registro da leggere 
 #reg = 
-address=0
 
-#Dati da leggere
-data = [0,0,0,0,0]
 
-#[1.2] - Leggere e stampare
+#[1.2] - Definire dati da leggere
+#data = 
+
+#Leggere e stampare
 
 client.close()

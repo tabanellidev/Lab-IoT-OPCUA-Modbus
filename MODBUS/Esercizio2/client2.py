@@ -21,7 +21,6 @@ data = [0,0,0,0,0]
 
 #[2.3] - Calcolo della media
 
-
 #[2.4] - Scrittura sul registro
 
 
