@@ -1,8 +1,9 @@
 from opcua import Client
 
 if __name__ == "__main__":
+    url_server = "opc.tcp://localhost:4840"
     #Client setup
-    client = Client("opc.tcp://localhost:4840")
+    client = Client(url_server)
     try:
         client.connect()
 

@@ -36,7 +36,6 @@ if __name__ == "__main__":
     try:
         # Ciclo for per incrementare il valore della variabile + 1 ad ogni ciclo e stamparlo
         while True:
-            time.sleep(1)
             #Recupero del valore della variabile
             tempL1 = varmL1.get_value()
             
@@ -46,6 +45,9 @@ if __name__ == "__main__":
             varmL1.set_value(tempL1)
 
             print("Valore L1: ", tempL1)
+            
+            # sleep per rallentare il ciclo
+            time.sleep(1)
             
 
     finally:
