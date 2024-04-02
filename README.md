@@ -4,6 +4,9 @@
 - Python > 3.10 
 - Powershell (se Windows)
 
+## Clonazione Repo
+git clone https://github.com/tabanellidev/Lab-IoT-OPCUA-Modbus.git
+
 ## Installazione
 
 ### Linux
