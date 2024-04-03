@@ -26,7 +26,6 @@ Attivare ambiente virtuale python
 
 
 ```
- Set-Execution Policy Unrestricted -Scope Process
  source env/bin/activate
 ```
 Installare librerie tramite pip
