@@ -6,7 +6,7 @@ import time
 
 #Setup Modus Client
 print('Start Modbus Client')
-client = ModbusClient(host='127.0.0.1', port=502)
+client = ModbusClient(host='127.0.0.1', port=50001)
 #Coordinate di lettura / scrittura
 reg=0; 
 address=0
@@ -16,8 +16,8 @@ data = [1,2,3,4,5]
 
 # Scrittura dei dati sui registri (40001 to 40005)
 print('Write',data)
-builder = BinaryPayloadBuilder(byteorder=Endian.Big,\
-                                wordorder=Endian.Little)
+builder = BinaryPayloadBuilder(byteorder=Endian.BIG,\
+                                wordorder=Endian.LITTLE)
 
 #Building del payload e scrittura sui registri
 for d in data:

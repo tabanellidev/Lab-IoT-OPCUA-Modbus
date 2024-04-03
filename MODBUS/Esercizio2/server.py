@@ -4,7 +4,12 @@ from pymodbus.datastore import ModbusSequentialDataBlock
 from pymodbus.datastore import ModbusSlaveContext, ModbusServerContext
 
 def run_async_server():
+    # port number
+    port = 50003
+
+    # Numero di registri
     nreg = 200
+
     # Inizializzazione del datastore
     store = ModbusSlaveContext(
         di=ModbusSequentialDataBlock(0, [15]*nreg),
@@ -22,10 +27,14 @@ def run_async_server():
     identity.ModelName = 'Modbus Server'
     identity.MajorMinorRevision = '3.0.2'
 
+
     # Start TCP Server
+    print(f'Modbus server started on localhost port {port}')
     StartTcpServer(context=context, host='localhost',\
-                   identity=identity, address=("127.0.0.1", 502))
+                   identity=identity, address=("127.0.0.1", port))
+    
 
 if __name__ == "__main__":
-    print('Modbus server started on localhost port 502')
     run_async_server()
+    
+    
