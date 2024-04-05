@@ -6,7 +6,7 @@ import time
 
 #Setup Modus Client
 print('Start Modbus Client')
-client = ModbusClient(host='127.0.0.1', port=502)
+client = ModbusClient(host='127.0.0.1', port=50001)
 #Coordinate di lettura / scrittura
 
 #[5.1] - Selezionare l'offset del registro da leggere 

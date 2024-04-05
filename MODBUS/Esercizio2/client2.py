@@ -6,15 +6,15 @@ import time
 
 #Setup Modus Client
 print('Start Modbus Client')
-client = ModbusClient(host='127.0.0.1', port=502)
-#[2.1] - Definire i registri di lettura e scrittura
+client = ModbusClient(host='127.0.0.1', port=50002)
+#[2.1] - Definire due registri di lettura e scrittura
 #reg_1 = 
 
 #reg_2 = 
 
 address=0
 
-#Dati da inviare
+# vettore per i dati da leggere
 data = [0,0,0,0,0]
 
 #[2.2] - Lettura dai registri

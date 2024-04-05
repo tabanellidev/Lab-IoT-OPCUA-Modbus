@@ -6,7 +6,7 @@ import time
 
 #Setup Modus Client
 print('Start Modbus Client')
-client = ModbusClient(host='127.0.0.1', port=502)
+client = ModbusClient(host='127.0.0.1', port=50002)
 
 #[2.1] - Definire i registri di lettura e scrittura
 reg_1=50
@@ -32,15 +32,13 @@ print(mean)
 
 #[2.4] - Scrittura sul registro
 print('Write',mean)
-builder = BinaryPayloadBuilder(byteorder=Endian.BIG,\
-                                wordorder=Endian.LITTLE)
+builder = BinaryPayloadBuilder(byteorder=Endian.BIG, wordorder=Endian.LITTLE)
 
 #Building del payload e scrittura sui registri
 builder.add_16bit_int(int(mean))
 
 payload = builder.build()
-result  = client.write_registers(int(reg_2), payload,\
-            skip_encode=True, unit=int(address))
+result  = client.write_registers(int(reg_2), payload, skip_encode=True, unit=int(address))
 
 
 client.close()
