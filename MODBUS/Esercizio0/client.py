@@ -8,7 +8,7 @@ import time
 print('Start Modbus Client')
 client = ModbusClient(host='127.0.0.1', port=50001)
 #Coordinate di lettura / scrittura
-reg=0; 
+reg=0
 address=0
 
 #Dati da inviare
@@ -28,6 +28,6 @@ result  = client.write_registers(int(reg), payload,\
 
 #Lettura dei registri
 rd = client.read_holding_registers(reg,len(data)).registers
-print('Read',rd)
+print('Read', rd)
 
 client.close()

@@ -16,8 +16,8 @@ data = [31,32,33,34,35]
 
 # Scrittura dei dati sui registri (40001 to 40005)
 print('Write',data)
-builder = BinaryPayloadBuilder(byteorder=Endian.Big,\
-                                wordorder=Endian.Little)
+builder = BinaryPayloadBuilder(byteorder=Endian.BIG,\
+                                wordorder=Endian.LITTLE)
 
 #Building del payload e scrittura sui registri
 for d in data:

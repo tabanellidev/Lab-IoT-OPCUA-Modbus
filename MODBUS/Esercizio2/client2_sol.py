@@ -32,8 +32,8 @@ print(mean)
 
 #[2.4] - Scrittura sul registro
 print('Write',mean)
-builder = BinaryPayloadBuilder(byteorder=Endian.Big,\
-                                wordorder=Endian.Little)
+builder = BinaryPayloadBuilder(byteorder=Endian.BIG,\
+                                wordorder=Endian.LITTLE)
 
 #Building del payload e scrittura sui registri
 builder.add_16bit_int(int(mean))
