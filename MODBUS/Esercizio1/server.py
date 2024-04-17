@@ -12,7 +12,7 @@ def run_async_server():
     # Numero di registri
     nreg = 200
 
-    # Inizializzazione del datastore
+    # Inizializzazione del datastore del server che corrisponde ai registri (rispettivamente: discrete input, coils, holding register, input register) del server
     store = ModbusSlaveContext(
         di=ModbusSequentialDataBlock(0, [15]*nreg),
         co=ModbusSequentialDataBlock(0, [16]*nreg),
