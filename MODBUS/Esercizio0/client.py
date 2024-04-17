@@ -17,8 +17,10 @@ address=0
 # Dati da inviare
 data = [1,2,3,4,5]
 
-# Scrittura dei dati sui registri (40001 to 40005)
-print('Write',data)
+# Scrittura dei dati sui registri
+print('Write', data)
+
+# Realizzazione del costruttore del builder
 builder = BinaryPayloadBuilder(byteorder=Endian.BIG, wordorder=Endian.LITTLE)
 
 # Building del payload in formato 16bit
