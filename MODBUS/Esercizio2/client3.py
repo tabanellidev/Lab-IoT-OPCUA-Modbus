@@ -2,7 +2,7 @@ from pymodbus.client import ModbusTcpClient as ModbusClient
 from pymodbus.constants import Endian
 from pymodbus.payload import BinaryPayloadBuilder
 from pymodbus.payload import BinaryPayloadDecoder
-import time
+import time, struct
 
 # Setup Modus Client
 print('Start Modbus Client')
@@ -16,6 +16,8 @@ reg_2 = 100
 address=0
 
 # Dati da leggere
+# Se si vuole gestire il floating point, modificare il numero di dati da leggere reg2 e gestire il dato che viene restituito dal server
+# Indizio per il floating point: utilizzare il pachetto struct
 numero_dati_da_leggere_reg1 = 5
 numero_dati_da_leggere_reg2 = 1
 

@@ -10,6 +10,7 @@ client = ModbusClient(host='127.0.0.1', port=50001)
 
 #[1.1] - Selezionare l'offset del registro da leggere 
 # Coordinate di lettura / scrittura
+# Indizio: lo stesso registro che il client1 ha scritto sul server
 # reg = 
 
 # Identificativo del dispositivo modbus (server)

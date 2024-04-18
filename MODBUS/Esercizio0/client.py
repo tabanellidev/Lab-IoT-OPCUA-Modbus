@@ -29,6 +29,7 @@ for d in data:
 payload = builder.build()
 
 # Scrittura dei dati sul holdings register
+# skip_encode=True serve per non codificare i dati in quanto sono stati già correttamente codificati attraverso il builder
 result  = client.write_registers(int(reg), payload, skip_encode=True, unit=int(address))
 
 # Lettura dei registri
