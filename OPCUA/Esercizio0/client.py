@@ -7,6 +7,9 @@ if __name__ == "__main__":
     try:
         client.connect()
 
+        # Fase 3 - Read
+        # IL Client naviga nel namespace, recupera il nodo Root all'interno del server, i suoi figli
+        # e all'interno del nodo Objects recupera Linea1 (che sarà associata alla macchina) e varL1 (che sarà la variabile della macchina)
         # Recupero del nodo root
         root = client.get_root_node()
         print("Root node is: ", root)
@@ -32,7 +35,7 @@ if __name__ == "__main__":
         print("Linea1: ", macchinaL1)
         print("varL1:  ", varmL1)
         
-        #Print del valore della variabile
+        # Print del valore della variabile
         print(varmL1.get_value())
 
 

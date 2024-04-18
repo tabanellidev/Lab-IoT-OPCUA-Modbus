@@ -16,6 +16,9 @@ if __name__ == "__main__":
     # Objects Node
     objects = server.get_objects_node()
 
+    # Fase 1 - Associazione 
+    # Creazione di un oggetto e di una variabile all'interno dell'Objects node
+
     # Aggiunta di oggetti e variabili all'Objects node
     macchinaL1 = objects.add_object(idx, "Linea1")      # Inizializzazione dell'oggetto Linea1 specificando namespace e nome
     varmL1 = macchinaL1.add_variable(idx, "varL1", 0)   # Inizializzazione della variabile varL1 specificando namespace, nome e valore iniziale (0)
@@ -23,6 +26,8 @@ if __name__ == "__main__":
     # Impostare la variabile come modificabile dal client
     varmL1.set_writable()    
 
+    # Fase 2 - Lavorazione
+    # Si simula la lavorazione della macchina, incrementando la variabile di 1 ad ogni ciclo
     # Print degli ids
     print('-------------------------')
     print("Object node is ", objects)
